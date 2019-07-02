@@ -1,17 +1,22 @@
 version: 0.2
-
 phases:
-  install: 
-    commands:
-      - npm i npm@latest -g
-      - pip install --upgrade pip
-      - pip install --upgrade awscli
+  install:
+    runtime-versions:
+      java: openjdk11
+      nodejs: 10
   pre_build:
     commands:
+      - echo Installing source NPM dependencies...
       - npm install
   build:
     commands:
-      - npm run build:$ENVIRONMENT
+      - echo Build started on `date`
+      - npm run build
   post_build:
     commands:
-      - aws s3 sync ./build $S3_BUCKET
+      # copy the contents of /build to S3
+      - aws s3 cp --recursive --acl public-read ./build S3_BUCKET 
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build
