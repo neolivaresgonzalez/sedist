@@ -24,7 +24,7 @@ class SearchForm extends React.Component {
           <label>
             <input type="text" value={this.state.value} onChange={this.handleChange} />
           </label>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="BUSCAR" />
         </form>
       );
     }
