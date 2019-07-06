@@ -109,7 +109,14 @@ def createtable():
 
 if __name__ == '__main__':
     request1 = {
-        'StackId': 'arn:aws:cloudformation:us-west-2:sd_lab3:stack/sample-stack/stackidgoeshere',
+        'StackId': 'arn:aws:cloudformation:us-west-2:accountgoeshere:stack/sample-stack/stackidgoeshere',
+        'ResponseURL': 'https://test.com',
+        'ResourceProperties': {
+            'teamname-environment': 'team1-dev',
+            'ServiceToken': 'lambdaarn',
+            'appname': 'app1',
+            'lookup': 'vpc'
+        },
         'RequestType': 'Create',
         'ServiceToken': 'lambdaarn',
         'ResourceType': 'Custom::Lookup',
@@ -117,9 +124,15 @@ if __name__ == '__main__':
         'LogicalResourceId': 'CUSTOMLOOKUP'
     }
     request2 = {
-        'StackId': 'arn:aws:cloudformation:us-west-2:sd_lab3:stack/sample-stack/stackid',
+        'StackId': 'arn:aws:cloudformation:us-west-2:accountgoeshere:stack/sample-stack/stackid',
+        'ResponseURL': 'https://test.com',
+        'ResourceProperties': {
+            'teamname-environment': 'team1-dev',
+            'ServiceToken': 'lambdaarn',
+            'appname': 'app1'
+        },
         'RequestType': 'Create',
-        'ServiceToken': 'arn:aws:lambda:us-west-2:sd_lab3:function:lambdafunction',
+        'ServiceToken': 'arn:aws:lambda:us-west-2:accountgoeshere:function:lambdafunction',
         'ResourceType': 'Custom::Lookup',
         'RequestId': 'ramdonid',
         'LogicalResourceId': 'CUSTOMLOOKUP'
