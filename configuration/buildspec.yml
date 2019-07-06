@@ -4,12 +4,14 @@ phases:
     runtime-versions:
       java: openjdk11
       nodejs: 10
-  pre_build:
     commands:
-      - echo Installing source NPM dependencies...
       - npm i npm@latest -g
       - pip install --upgrade pip
       - pip install --upgrade awscli
+  pre_build:
+    commands:
+      - echo Installing source NPM dependencies...
+      - npm install
   build:
     commands:
       - echo Build started on `date`
