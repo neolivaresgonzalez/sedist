@@ -17,6 +17,7 @@ phases:
     commands:
       # copy the contents of /build to S3
       - aws s3 sync ./build $S3_BUCKETS
+      - cd ..
 artifacts:
   files:
     - '**/*'
