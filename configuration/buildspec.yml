@@ -9,12 +9,16 @@ phases:
       - cd frontend/
       - echo Installing source NPM dependencies...
       - npm install
+      - cd ..
   build:
     commands:
+      - cd frontend/
       - echo Build started on `date`
       - npm run build
+      - cd ..
   post_build:
     commands:
+      - cd frontend/
       # copy the contents of /build to S3
       - aws s3 sync ./build $S3_BUCKETS
       - cd ..
