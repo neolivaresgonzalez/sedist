@@ -1,1 +1,0 @@
-Para desplegar: aws cloudformation deploy --template-file DynamoDB_Table.template --stack-name dynamotest --parameters-override HashKeyElementName="id"
