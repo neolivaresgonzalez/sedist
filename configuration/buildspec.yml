@@ -5,22 +5,30 @@ phases:
       java: openjdk11
       nodejs: 10
     commands:
+      - cd frontend/
       - npm i npm@latest -g
       - pip install --upgrade pip
       - pip install --upgrade awscli
+      - cd ..
   pre_build:
     commands:
+      - cd frontend/
       - echo Installing source NPM dependencies...
       - npm install
+      - cd ..
   build:
     commands:
+      - cd frontend/
       - echo Build started on `date`
       - npm run build
+      - cd ..
   post_build:
     commands:
+      - cd frontend/
       # copy the contents of /build to S3
       - aws s3 sync ./build $S3_BUCKET
+      - cd ..
 artifacts:
   files:
     - '**/*'
-  base-directory: build
+  base-directory: frontend/build
