@@ -7,11 +7,13 @@ phases:
   pre_build:
     commands:
       - echo Installing source NPM dependencies...
-      - npm install
+      - npm i npm@latest -g
+      - pip install --upgrade pip
+      - pip install --upgrade awscli
   build:
     commands:
       - echo Build started on `date`
-      - npm run build
+      - npm run build:$ENVIRONMENT
   post_build:
     commands:
       # copy the contents of /build to S3
