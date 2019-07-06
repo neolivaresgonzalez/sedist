@@ -16,9 +16,8 @@ phases:
   post_build:
     commands:
       # copy the contents of /build to S3
-      - aws s3 sync ./build $S3_BUCKET
-      - cd ..
+      - aws s3 sync ./build $S3_BUCKETS
 artifacts:
   files:
     - '**/*'
-  base-directory: build
+  base-directory: frontend/build
