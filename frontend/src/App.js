@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import SearchForm from './controller/SearchForm';
 import logo from './logo.svg';
 import './App.css';
