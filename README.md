@@ -32,12 +32,15 @@ Basado en la documentación de Facebook de: This project was bootstrapped with [
 ## Conexion API Gateway, AWS Lambda y DynamoDB
 
 Para este sistema distribuido se uso Amazon Web Services, en concrreto estos 3 componentes que tienen las siguientes funcionalidades:
-```
-1. API Gateway: Este servicio provee una API REST para acceder a los datos. En este caso tiene un endpoint con un GET para obtener la busqueda que realiza el usuario
-```
-```
-2. AWS Lambda: Servicio que hace correr el codigo para manegar servidores la cual se encarga de escalarlo con gran disponibilidad. EN este caso recibe el request del componente API Gateway y se comunica con la base de datos de DynamoDB para sacar todos los terminos que concuerden con la busqueda.
-```
-```
-3. DynamoDB: Servicio de una base de datos noSQL de llave-valor en donde esta alojado los titulos de una base de datos Wikipedia
-```
+
+* 1. API Gateway: Este servicio provee una API REST para acceder a los datos.
+En este caso tiene un endpoint con un GET para obtener la busqueda que realiza el usuario
+
+* 2. AWS Lambda: Servicio que hace correr el codigo para manegar servidores la cual se encarga de escalarlo 
+con gran disponibilidad. 
+En este caso recibe el request del componente API Gateway y se comunica con la base de datos de DynamoDB
+para sacar todos los terminos que concuerden con la busqueda.
+
+* 3. DynamoDB: Servicio de una base de datos noSQL de llave-valor en donde esta alojado los titulos 
+de una base de datos Wikipedia
+
