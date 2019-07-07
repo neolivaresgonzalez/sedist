@@ -1,9 +1,7 @@
 Este frontend fue implementado basado en este tutorial: https://medium.com/@hzburki.hzb/automate-static-site-deployment-on-s3-with-aws-codebuild-8b2546a360df
 
 Corresponde a un sitio estático levantado en un bucket de AWS S3 mediante un pipeline descrito en la siguiente figura:
-
-
-![alt text][frontend.png)
+![Alt text](frontend.png)
 
 ## AWS CodePipeline aplicado
 
