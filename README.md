@@ -29,7 +29,7 @@ La pagina esta desplegada en: http://sedistbucket.s3-website.us-east-2.amazonaws
 La aplicación web construida fue implementada usando el framework ReactJS. 
 Basado en la documentación de Facebook de: This project was bootstrapped with [Create React App] en (https://github.com/facebook/create-react-app).
 
-## Conexion API Gateway, AWS Lambda y DynamoDB
+## Sistema API Gateway, AWS Lambda y DynamoDB
 
 Para este sistema distribuido se uso Amazon Web Services, en concrreto estos 3 componentes que tienen las siguientes funcionalidades:
 
