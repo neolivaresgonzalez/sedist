@@ -10,5 +10,5 @@ La descripción de cada sistema desplegable se encuentra en el README.md de cada
 
 En líneas generales, este repositorio contiene la arquitectiura presentada en la figura:
 
-![alt text](http://url/to/img.png)
+![Alt text](distributedQuery.png)
 
